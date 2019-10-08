@@ -1,0 +1,6 @@
+[Unit]
+Description=Bluetooth hciattach
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rtk_hciattach -n -s 115200 ttyS0 rtk_h5

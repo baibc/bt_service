@@ -1,0 +1,8 @@
+1.modify configure
+        /usr/local -> /usr
+        libexec -> lib
+2.install
+        ./configure --prefix=/usr --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var
+        make -j8 & make install
+3.sudo vi /usr/share/dbus-1/services/org.bluez.obex.service
+        Exec=/usr/lib/bluetooth/obexd
